@@ -1,0 +1,334 @@
+:root {
+  --primary: #1e90ff;
+  --primary-light: #6ab7ff;
+  --bg-light: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --text-color: #ffffff;
+  --dark-text: #1e1e1e;
+  --transition: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f52ba, #87cefa);
+  color: var(--dark-text);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- NAVBAR ----- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  backdrop-filter: blur(10px);
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-color);
+}
+
+.navbar nav a {
+  color: var(--text-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: var(--primary-light);
+  text-shadow: 0 0 10px var(--primary);
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.search input {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.search button {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search button:hover {
+  background: var(--primary-light);
+}
+
+/* ----- MAIN CONTENT ----- */
+.content {
+  flex: 1;
+  padding: 60px 80px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.glass {
+  background: var(--bg-light);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- FOOTER ----- */
+.footer {
+  text-align: center;
+  padding: 15px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+/* ----- BACKGROUND VARIANTS ----- */
+body.sunny {
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+}
+body.cloudy {
+  background: linear-gradient(135deg, #757f9a, #d7dde8);
+}
+body.rainy {
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+}
+body.night {
+  background: linear-gradient(135deg, #232526, #414345);
+}
+/* ===== NAVBAR ENHANCEMENT ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* LINKS */
+.navbar nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav a {
+  position: relative;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #ffffff;
+}
+
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #4fc3f7; /* Cool blue underline */
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+  width: 100%;
+}
+
+/* SEARCH BOX */
+.navbar .search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar .search input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+}
+
+.navbar .search button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #4fc3f7;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navbar .search button:hover {
+  background: #29b6f6;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.day-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s;
+}
+
+.day-card:hover {
+  transform: scale(1.05);
+}
+#locationName {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #fff;
+  margin-top: -10px;
+  opacity: 0.9;
+}
+
+/* ===== General Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+/* ===== Base Layout ===== */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Responsive Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  flex-wrap: wrap;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search input {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* ===== Responsive Cards / Sections ===== */
+.weather-card, .forecast-card, .about, .content {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* ===== Responsive Footer ===== */
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 1024px) {
+  .navbar nav {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .search input {
+    width: 90%;
+  }
+
+  .weather-card {
+    font-size: 0.9rem;
+  }
+
+  h1, h2 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar nav a {
+    font-size: 0.9rem;
+  }
+
+  .weather-card {
+    padding: 15px;
+  }
+
+  .search input, .search button {
+    width: 100%;
+  }
+}

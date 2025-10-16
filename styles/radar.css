@@ -1,0 +1,131 @@
+/* ======== GLOBAL ======== */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom right, #005c97, #363795);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00bfff;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search input {
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.search button {
+  padding: 7px 14px;
+  border: none;
+  background: #00aaff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search button:hover {
+  background: #0088cc;
+}
+
+/* ======== MAP ======== */
+#map {
+  width: 90%;
+  height: 80vh;
+  margin: 30px auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ======== INFO BOX ======== */
+.info {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ======== FOOTER ======== */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 1024px) {
+  #map {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .search {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #map {
+    width: 95%;
+    height: 70vh;
+  }
+
+  .info {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  #map {
+    height: 65vh;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
+}
