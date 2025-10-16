@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles/today.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="weather-bg">
+  <header class="navbar glass">
+    <div class="logo">🌤️ WeatherNow</div>
+    <nav>
+      <a href="today.html" class="active">Today</a>
+      <a href="hourly.html">Hourly</a>
+      <a href="ten-day.html">10-Day</a>
+      <a href="month.html">Monthly</a>
+      <a href="radar.html">Radar</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search city..." id="searchInput">
+      <button id="searchBtn">Search</button>
+    </div>
+  </header>
+
+<main class="content">
+  <h1>Today’s Weather</h1>
+  <section class="hero glass">
+    <div class="weather-left">
+      <h2 id="cityName">Karachi, PK</h2>
+      <p id="weatherDesc">Sunny</p>
+      <h1 id="temperature">28°C</h1>
+      <div class="extra">
+        <span>💧 Humidity: 60%</span>
+        <span>🌬️ Wind: 12 km/h</span>
+      </div>
+    </div>
+
+    <div class="weather-right">
+      <img src="images/images.png" alt="Weather Icon" id="weatherIcon" />
+    </div>
+  </section>
+</main>
+
+  <footer class="glass footer">
+    © 2025 WeatherNow | Powered by OpenWeatherMap
+  </footer>
+
+  <script src="scripts/today.js" type="module"></script>
+</body>
+</html>

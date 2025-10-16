@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hourly Forecast - WeatherNow</title>
+    <link rel="stylesheet" href="styles/hourly.css" />
+    <script defer src="scripts/hourly.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+
+  <body>
+    <header class="navbar glass">
+      <div class="logo">🌤️ WeatherNow</div>
+      <nav>
+        <a href="today.html">Today</a>
+        <a href="hourly.html" class="active">Hourly</a>
+        <a href="ten-day.html">10-Day</a>
+        <a href="month.html">Monthly</a>
+        <a href="radar.html">Radar</a>
+      </nav>
+      <div class="search">
+        <input type="text" placeholder="Search city..." id="searchInput" />
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+
+    <main class="hourly-section">
+      <h2 id="hourlyTitle">Hourly Forecast (Karachi)</h2>
+      <div class="hourly-table glass">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Temp (°C)</th>
+              <th>Condition</th>
+              <th>Wind (km/h)</th>
+              <th>Humidity (%)</th>
+            </tr>
+          </thead>
+          <tbody id="hourlyData"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

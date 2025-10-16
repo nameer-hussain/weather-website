@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10-Day Forecast | WeatherNow</title>
+  <link rel="stylesheet" href="styles/ten-day.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="weather-bg">
+  <header class="navbar glass">
+    <div class="logo">🌤️ WeatherNow</div>
+    <nav>
+      <a href="today.html" class="active">Today</a>
+      <a href="hourly.html">Hourly</a>
+      <a href="ten-day.html">10-Day</a>
+      <a href="month.html">Monthly</a>
+      <a href="radar.html">Radar</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search city..." id="searchInput">
+      <button id="searchBtn">Search</button>
+    </div>
+  </header>
+
+ <main class="content">
+  <h1>10 Din ka Weather Forecast</h1>
+  <h2 id="locationName">Location: —</h2>
+  <div id="forecastContainer" class="forecast-grid">
+
+  </div>
+</main>
+
+  <footer class="glass footer">
+    © 2025 WeatherNow | Powered by OpenWeatherMap
+  </footer>
+
+  <script src="scripts/ten-day.js" type="module"></script>
+</body>
+</html>

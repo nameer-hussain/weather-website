@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radar | WeatherNow</title>
+
+    
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet/dist/leaflet.css"
+    />
+
+    <link rel="stylesheet" href="styles/radar.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="navbar glass">
+      <div class="logo">🌤️ WeatherNow</div>
+      <nav>
+        <a href="today.html">Today</a>
+        <a href="hourly.html">Hourly</a>
+        <a href="ten-day.html">10-Day</a>
+        <a href="month.html">Monthly</a>
+        <a href="radar.html" class="active">Radar</a>
+      </nav>
+      <div class="search">
+        <input
+          type="text"
+          placeholder="Search city..."
+          id="searchInput"
+        />
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="title">🌍 Live Weather Radar</h1>
+      <div id="map"></div>
+
+      <div class="info glass">
+        <h3 id="cityName">Karachi, PK</h3>
+        <p id="condition">☁️ Loading weather data...</p>
+        <p id="temp">🌡️ -- °C</p>
+        <p id="wind">💨 Wind: -- km/h</p>
+        <p id="humidity">💧 Humidity: --%</p>
+      </div>
+    </main>
+
+    <footer class="glass footer">
+      © 2025 WeatherNow | Powered by WeatherAPI & Leaflet Maps
+    </footer>
+
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts/radar.js"></script>
+  </body>
+</html>
